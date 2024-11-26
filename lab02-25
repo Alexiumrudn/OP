@@ -1,0 +1,15 @@
+import math
+
+x1, y1 = 1, 1
+x2, y2 = 2, 2
+
+d = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+a = d / math.sqrt(2)
+
+area = a ** 2
+
+per = 4 * a
+
+print(f"Площадь квадрата: {area}")
+print(f"Периметр квадрата: {per}")
