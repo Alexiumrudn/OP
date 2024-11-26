@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string elements[10] = {
+        "Vodorod",
+        "Geliy",
+        "Litiy",
+        "Berilliy",
+        "Bor",
+        "Uglerod",
+        "Azot",
+        "Kislorod",
+        "Phtor",
+        "Neon"
+    };
+    int a;
+    cout << "Vvedite poryadkoviy nomer elementa ot 1 do 10 ";
+    cin >> a;
+        if (a >= 1 && a <= 10) {
+        cout << "Element s nomerom " << a << ": " << elements[a - 1] << endl;
+    }
+    else {
+        cout << "Oshibka, vvedite nomer ot 1 do 10 " << endl;
+    }
+
+    return 0;
+}
