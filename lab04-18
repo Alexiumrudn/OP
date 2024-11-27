@@ -1,0 +1,20 @@
+import math
+
+def f(x, y, x0, y0, r):
+    a = math.sqrt((x - x0) ** 2 + (y - y0) ** 2)
+    return a <= r
+
+def main():
+    x0, y0 = map(float, input("Координаты центра круга ").split())
+    r = float(input("Радиус круга: "))
+    n = int(input("Количество точек: "))
+    ans = 0
+    for _ in range(n):
+        x, y = map(float, input("Введите координаты точки: ").split())
+        if f(x, y, x0, y0, r):
+            ans += 1
+    
+    print(f"Ответ: {ans}")
+
+if __name__ == "__main__":
+    main()
