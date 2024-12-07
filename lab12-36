@@ -17,6 +17,7 @@ int main()
     getline(cin, Table1.country);
     cout << "Введите высоту: ";
     cin >> Table1.height;
+    cin.ignore();
     cout << "Введите материал: ";
     getline(cin, Table1.material);
     cout << "Введите цену: ";
