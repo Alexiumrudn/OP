@@ -1,0 +1,19 @@
+def f(n):
+    sum = 0
+    a = 1
+    while a < n:  
+        if n % a == 0:
+            sum += a
+        a += 1
+    
+    return sum == n
+
+ans = []
+
+n = 1
+while n <= 1000: 
+    if f(n):
+        ans.append(n)
+    n += 1
+
+print("Совершенные числа: ", ans)
