@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Table
+{
+    string country;  
+    float height;         
+    string material; 
+    double price;       
+};
+
+int main() 
+{
+    Table Table1;
+    cout << "Введите страну: ";
+    getline(cin, Table1.country);
+    cout << "Введите высоту: ";
+    cin >> Table1.height;
+    cout << "Введите материал: ";
+    getline(cin, Table1.material);
+    cout << "Введите цену: ";
+    cin >> Table1.price;
+
+    cout << "Информация о столе:\n";
+    cout << "Страна: " << Table1.country << "\n";
+    cout << "Высота: " << Table1.height << "\n";
+    cout << "Материал: " << Table1.material << "\n";
+    cout << "Цена: " << Table1.price << "\n";
+
+    return 0;
+}
