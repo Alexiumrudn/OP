@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Chair
+{
+    string country;
+    float height;
+    string material;
+    double price;
+};
+
+int main()
+{
+    Chair Chair1;
+    cout << "Страна: ";
+    getline(cin, Chair1.country);
+    cout << "Высота: ";
+    cin >> Chair1.height;
+    cout << "Материал: ";
+    cin.ignore();
+    getline(cin, Chair1.material);
+    cout << "Цена: ";
+    cin >> Chair1.price;
+
+    cout << "Страна: " << Chair1.country << "\n";
+    cout << "Высота: " << Chair1.height << " \n";
+    cout << "Материал: " << Chair1.material << "\n";
+    cout << "Цена: " << Chair1.price << "\n";
+
+    return 0;
+}
