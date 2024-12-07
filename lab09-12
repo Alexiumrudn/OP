@@ -1,0 +1,9 @@
+def f(n):
+    ans = 0
+    while n >= 5:
+        n //= 5
+        ans += n
+    return ans
+
+n = int(input("Введите натуральное число n: "))
+print(f"Количество нулей в конце: {f(n)}")
