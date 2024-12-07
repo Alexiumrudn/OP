@@ -1,0 +1,25 @@
+def main():
+    pos = 0 
+    neg = 0  
+    null = 0      
+    while True:  
+        a = input("Введите число ('exit' для выхода): ")
+        if a.lower() == 'exit':
+            break  
+        try:
+            n = float(a)  
+            if n > 0:
+                pos += 1
+            elif n < 0:
+                neg += 1
+            else:
+                null += 1
+        except ValueError:
+            print("Ошибка")
+
+    print(f"Количество положительных чисел: {pos}")
+    print(f"Количество отрицательных чисел: {neg}")
+    print(f"Количество нулей: {null}")
+
+if __name__ == "__main__":
+    main()
