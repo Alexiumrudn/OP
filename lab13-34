@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm> 
+using namespace std;
+
+struct EGE 
+{
+    string region;
+    int subjects;
+    int graduates;
+    double score;
+};
+
+bool f(const EGE& a, const EGE& b)
+{
+    return a.score < b.score; 
+}
+
+int main() 
+{
+    vector<EGE> ege = 
+    {
+        {"Москва", 1, 2, 3},
+        {"Санкт-Петербург", 4, 5, 6},
+        {"ААААААА", 7, 8, 9},
+        {"БББББББ", 10, 11, 12}
+    };
+    sort(ege.begin(), ege.end(), f);
+    cout << "Сортировка по среднему баллу:\n";
+    for (const auto& ege : ege) 
+    {
+        cout << "Регион: " << ege.region<< ", Предметы: " << ege.subjects<< ", Выпуснки: " << ege.graduates << ", Бал: " << ege.score;
+    }
+
+    return 0;
+}
