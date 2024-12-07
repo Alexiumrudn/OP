@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    string password = "111"; 
+    string userInput;
+    int attempts = 0;
+
+    do {
+        cout << "Пароль: ";
+        cin >> userInput;
+        attempts++;
+
+        if (userInput == password) {
+            cout << "Молодец!" << endl;
+            break; 
+        }
+
+    } while (attempts < 6);
+
+    if (attempts == 6) {
+        cout << "Попыток не осталось" << endl;
+    }
+
+    return 0;
+}
