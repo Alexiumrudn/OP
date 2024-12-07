@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+struct Coat
+{
+    string country;
+    string size;
+    string material;
+    double price;
+};
+
+
+bool f(const Coat& a, const Coat& b)
+{
+    return a.price < b.price;
+}
+
+int main()
+{
+    vector<Coat> coat1 = 
+    {
+        {"Италия", "S", "Шерсть", 813},
+        {"Россия", "S", "Шерсть", 801938},
+        {"Испания", "S", "Шерсть", 124123},
+        {"Китай", "S", "Шерсть", 123}
+    };
+
+    sort(coat1.begin(), coat1.end(), f);
+
+    cout << "Сортировка по цене:\n";
+    for (const auto& coat : coat1) 
+    {
+        cout << "Страна: " << coat.country << ", Размер: " << coat.size << ", Материал: " << coat.material << ", Цена: " << coat.price;
+    }
+    return 0;
+}
