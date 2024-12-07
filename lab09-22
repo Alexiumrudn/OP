@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int f(int n)
+{
+    int ans = 0;
+    for (int x = 1; x < sqrt(n); ++x) 
+    {  
+        for (int y = 1; y < sqrt(n); ++y) 
+        { 
+            if (x * x + y * y < n) 
+            {
+                ans++;
+            }
+        }
+    }
+    return ans;
+}
+
+int main() 
+{
+    int n;
+    cout << "Натуральное число n: ";
+    cin >> n;
+    cout << "Количество решени " << f(n) << endl;
+    return 0;
+}
