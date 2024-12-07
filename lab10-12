@@ -1,0 +1,11 @@
+def f(a):
+    ans = a[1::2]  
+    print(*ans, sep='\n')
+
+def main():
+    n = int(input("Размер массива: "))
+    a = [int(input(f"Элемент {i + 1}: ")) for i in range(n)]
+    print("Элемент с четными номерами:")
+    f(a)
+if __name__ == "__main__":
+    main()
