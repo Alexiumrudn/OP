@@ -1,0 +1,23 @@
+def f(vr, k1, k2):
+    vr[k1], vr[k2] = vr[k2], vr[k1]
+
+def main():
+    r = int(input("Количество строк: "))
+    c = int(input("Количество столбцов: "))
+    vr = []
+    print("Элементы матрицы: ")
+    for _ in range(r):
+        q = list(map(int, input().split()))
+        vr.append(q)
+    k1 = int(input("Номер первой строки: ")) - 1  
+    k2 = int(input("Номер второй строки: ")) - 1  
+    if 0 <= k1 < r and 0 <= k2 < r and k1 != k2:
+        f(vr, k1, k2)
+        print("После обмена строк: ")
+        for q in vr:
+            print(' '.join(map(str, q)))
+    else:
+        print("Ошибка")
+
+if __name__ == "__main__":
+    main()
